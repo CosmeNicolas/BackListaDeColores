@@ -4,7 +4,7 @@ import cors from "cors";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
-import { listarColores } from "./src/controllers/colores.controllers.js";
+import coloresRouter from './src/routes/colores.routes.js'
 import './src/database/database.js'
 
 const app = express();
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 //3 configurar las rutas
 
-app.use("/api", listarColores);
+app.use("/api", coloresRouter);
 
 /* app.get('/',(req, res)=>{
     //acá va la logica de la peticion
