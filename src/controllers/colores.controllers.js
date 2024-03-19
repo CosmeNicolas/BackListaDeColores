@@ -20,3 +20,16 @@ export const crearColor = async(req, res)=>{
         res.status(400).json({mensaje:'El color no pudo ser creado'})
     }
 }
+
+export const obtenerColor = async(req,res)=>{
+    try {
+        const colorBuscado = await Color.findById(req.params.id)
+        if(!colorBuscado){
+            return res.status(404).json({mensaje:'No se encontro el color con su id'})
+        }
+        res.status(200).json(colorBuscado)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({mensaje:'No se encontro el color con su Id'})
+    }
+}
