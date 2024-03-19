@@ -5,6 +5,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import { listarColores } from "./src/controllers/colores.controllers.js";
+import './src/database/database.js'
 
 const app = express();
 //1 configurar el puerto
