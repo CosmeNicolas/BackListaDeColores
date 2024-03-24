@@ -1,7 +1,9 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose from "mongoose";
+
+const { Schema } = mongoose;
 
 const colorSchema = new Schema({
-    "nombreColor":{
+    nombreColor:{
         type:String,
         require:true,
         minLength:3,
