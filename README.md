@@ -1,4 +1,4 @@
-#  Backend de Lista de Colores
+#  Backend de Paleta de Colores
 Este es el backend de una aplicación de lista de colores desarrollada con MongoDB, Express y Node.js.
 
 ## Configuración del Proyecto
